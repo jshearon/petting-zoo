@@ -17,23 +17,28 @@ from turtle import Turtle
 from gecko import Gecko
 
 
-Bilbo = Whale("Bilbo", "Beluga Whale")
-Jaws = Shark("Jaws", "Great White Shark")
-Fabien = Goldfish("Fabien", "Goldfish")
-Saba = Eel("Saba", "Electric Eel")
-Alvin = Dolphin("Alvin", "Dolphin")
+Bilbo = Whale("Bilbo", "Beluga Whale", "Whale Food")
+Jaws = Shark("Jaws", "Great White Shark", "Shark Food")
+Fabien = Goldfish("Fabien", "Goldfish", "Fish Food")
+Saba = Eel("Saba", "Electric Eel", "Eel Food")
+Alvin = Dolphin("Alvin", "Dolphin", "Dolphin Food")
 
-Zeynep = Donkey("Zeynep", "Donkey", "midday")
-Zaine = Monkey("Zaine", "Capuchin Monkey", "morning")
-Anna = Ostrich("Anna", "Ostrich", "afternoon")
-Leonard = Llama("Leonard", "Llama", "morning")
-Bertie = Tiger("Bertie", "Bengal Tiger", "midday")
+Zeynep = Donkey("Zeynep", "Donkey", "midday", "Donkey Food")
+Zaine = Monkey("Zaine", "Capuchin Monkey", "morning", "Monkey Food")
+Anna = Ostrich("Anna", "Ostrich", "afternoon", "Ostrich Food")
+Leonard = Llama("Leonard", "Llama", "morning", "Llama Food")
+Bertie = Tiger("Bertie", "Bengal Tiger", "midday", "Tiger Food")
 
-Sherlock = Snake("Sherlock", "Python")
-Wilbur = Lizard("Wilbur", "Lizard")
-Madeline = Crocodile("Madeline", "Crocodile")
-Wilson = Turtle("Wilson", "Sea Turtle")
-Woody = Gecko ("Woody", "Gecko")
+Sherlock = Snake("Sherlock", "Python", "Snake Food")
+Wilbur = Lizard("Wilbur", "Lizard", "Lizard Food")
+Madeline = Crocodile("Madeline", "Crocodile", "Croc Food")
+Wilson = Turtle("Wilson", "Sea Turtle", "Turtle Food")
+Woody = Gecko ("Woody", "Gecko", "Gecko Food")
 
-roberto = Donkey("Roberto", "alpaca", "midday")
+roberto = Donkey("Roberto", "alpaca", "midday", "Donkey Food")
 print(f'{roberto.name} the {roberto.species} is available to pet during the {roberto.shift} shift.')
+
+print(Wilson.feed())
+print(Madeline)
+
+print(Bertie)
