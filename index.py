@@ -1,4 +1,4 @@
-from animals import create_zoo
+from models.animal import create_zoo
 
 def main():
   create_zoo()

@@ -1,7 +1,9 @@
 from datetime import date
+from models.animal import Animal
   
-class Crocodile:
+class Crocodile(Animal):
   def __init__(self, name, species, food):
+    super().__init__(name, species, food)
     self.name = name
     self.species = species
     self.date_added = date.today()
