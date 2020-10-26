@@ -1,3 +1,4 @@
+from animals import Animal
 from datetime import date
 
 class Dolphin:

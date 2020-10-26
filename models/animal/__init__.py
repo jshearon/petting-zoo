@@ -12,10 +12,29 @@ from models.ostrich import Ostrich
 from models.tiger import Tiger
 from models.snake import Snake
 from models.lizard import Lizard
-from models.crocodile import Crocodile
+from .crocodile import Crocodile
 from models.turtle import Turtle
 from models.gecko import Gecko
 from models.attractions import PettingZoo, Wetlands, SnakePit
+
+class Animal:
+  def __init__(self, name, species, food, chip_num):
+    self.name = name
+    self.species = species
+    self.food = food
+    self.date_added = date.today()
+
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+    
+    @property
+    def chip_number(self):
+        return self.__chip_number
+    
+    @chip_number.setter
+    def chip_number(self, num):
+        pass
+
 
 def create_zoo():
   def pettable_critters():
@@ -30,7 +49,7 @@ def create_zoo():
 
   petting_zoo = PettingZoo("Cuddle Town")
   petting_zoo.animals = pettable_critters()
-  print(f"{petting_zoo.name} is the best place to find critters to pet")
+  print(f"{petting_zoo.name}: {petting_zoo.description}")
   for animal in petting_zoo.animals:
     print(f"  *{animal.name} the {animal.species}")
 
@@ -46,7 +65,7 @@ def create_zoo():
   
   wet_lands = Wetlands("Splash City")
   wet_lands.animals = water_critters()
-  print(f"{wet_lands.name} - bring your raincoat!")
+  print(f"{wet_lands.name}: {wet_lands.description}")
   for animal in wet_lands.animals:
     print(f"  *{animal.name} the {animal.species}")
 
@@ -63,7 +82,7 @@ def create_zoo():
   
   snake_pit = SnakePit("Fangs R Us")
   snake_pit.animals = slither_critters()
-  print(f"{snake_pit.name} is the best place to find critters to pet")
+  print(f"{snake_pit.name}: {snake_pit.description}")
   for animal in snake_pit.animals:
     print(f"  *{animal.name} the {animal.species}")
 
