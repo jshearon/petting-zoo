@@ -1,28 +1,29 @@
-from models.whale import Whale
-from models.shark import Shark
-from models.goldfish import Goldfish
-from models.eel import Eel
-from models.dolphin import Dolphin
-from models.donkey import Donkey
-from models.monkey import Monkey
-from models.llama import Llama
-from models.ostrich import Ostrich
-from models.tiger import Tiger
-from models.snake import Snake
-from models.lizard import Lizard
-from models.crocodile import Crocodile
-from models.turtle import Turtle
-from models.gecko import Gecko
-from models.attractions import PettingZoo, Wetlands, SnakePit
+from animals import (
+  Whale, 
+  Shark, 
+  Goldfish, 
+  Eel, 
+  Dolphin, 
+  Donkey, 
+  Monkey, 
+  Llama, 
+  Ostrich, 
+  Tiger, 
+  Snake, 
+  Lizard, 
+  Crocodile, 
+  Turtle, 
+  Gecko)
+from attractions import PettingZoo, Wetlands, SnakePit
 
 def create_zoo():
   def pettable_critters():
     list = []
-    Zeynep = Donkey("Zeynep", "Donkey", "midday", "Donkey Food")
-    Zaine = Monkey("Zaine", "Capuchin Monkey", "morning", "Monkey Food")
-    Anna = Ostrich("Anna", "Ostrich", "afternoon", "Ostrich Food")
-    Leonard = Llama("Leonard", "Llama", "morning", "Llama Food")
-    Bertie = Tiger("Bertie", "Bengal Tiger", "midday", "Tiger Food") 
+    Zeynep = Donkey("Zeynep", "Donkey", "midday", "Donkey Food", 12345)
+    Zaine = Monkey("Zaine", "Capuchin Monkey", "morning", "Monkey Food", 12345)
+    Anna = Ostrich("Anna", "Ostrich", "afternoon", "Ostrich Food", 12345)
+    Leonard = Llama("Leonard", "Llama", "morning", "Llama Food", 12345)
+    Bertie = Tiger("Bertie", "Bengal Tiger", "midday", "Tiger Food", 12345) 
     list.extend([Zeynep, Zaine, Anna, Leonard, Bertie]) 
     return list
 
@@ -35,11 +36,11 @@ def create_zoo():
 
   def water_critters():
     list = []
-    Bilbo = Whale("Bilbo", "Beluga Whale", "Whale Food")
-    Jaws = Shark("Jaws", "Great White Shark", "Shark Food")
-    Fabien = Goldfish("Fabien", "Goldfish", "Fish Food")
-    Saba = Eel("Saba", "Electric Eel", "Eel Food")
-    Alvin = Dolphin("Alvin", "Dolphin", "Dolphin Food")
+    Bilbo = Whale("Bilbo", "Beluga Whale", "Whale Food", 12345)
+    Jaws = Shark("Jaws", "Great White Shark", "Shark Food", 12345)
+    Fabien = Goldfish("Fabien", "Goldfish", "Fish Food", 12345)
+    Saba = Eel("Saba", "Electric Eel", "Eel Food", 12345)
+    Alvin = Dolphin("Alvin", "Dolphin", "Dolphin Food", 12345)
     list.extend([Bilbo, Jaws, Fabien, Saba, Alvin])
     return list
   
@@ -52,14 +53,17 @@ def create_zoo():
 
   def slither_critters():
     list = []
-    Sherlock = Snake("Sherlock", "Python", "Snake Food")
-    Wilbur = Lizard("Wilbur", "Lizard", "Lizard Food")
+    Sherlock = Snake("Sherlock", "Python", "Snake Food", 12345)
+    Wilbur = Lizard("Wilbur", "Lizard", "Lizard Food", 12345)
     Madeline = Crocodile("Madeline", "Crocodile", "Croc Food", 12345)
-    Wilson = Turtle("Wilson", "Sea Turtle", "Turtle Food")
-    Woody = Gecko ("Woody", "Gecko", "Gecko Food")
+    Wilson = Turtle("Wilson", "Sea Turtle", "Turtle Food", 12345)
+    Woody = Gecko ("Woody", "Gecko", "Gecko Food", 12345)
     list.extend([Sherlock, Wilbur, Madeline, Wilson, Woody])
     Madeline.chip_num = 12
     print(Madeline.chip_num)
+    Madeline.feed()
+    Madeline.run()
+    Madeline.swim()
     return list
   
   snake_pit = SnakePit("Fangs R Us")
