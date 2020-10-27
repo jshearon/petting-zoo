@@ -1,8 +1,4 @@
-class Wetlands:
-  def __init__(self, name):
-    self.name = name
-    self.description = "Just keep swimming, just keep swimming"
-    self.animals = list()
-  
-  def add_animal(self, animal):
-    self.animals.append(animal)
+from .attraction import Attraction
+class Wetlands(Attraction):
+  def __init__(self, name, description):
+        super().__init__(name, description)

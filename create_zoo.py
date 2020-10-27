@@ -27,7 +27,7 @@ def create_zoo():
     list.extend([Zeynep, Zaine, Anna, Leonard, Bertie]) 
     return list
 
-  petting_zoo = PettingZoo("Cuddle Town")
+  petting_zoo = PettingZoo("Cuddle Town", "bla bla bla")
   petting_zoo.animals = pettable_critters()
   print(f"{petting_zoo.name}: {petting_zoo.description}")
   for animal in petting_zoo.animals:
@@ -44,7 +44,7 @@ def create_zoo():
     list.extend([Bilbo, Jaws, Fabien, Saba, Alvin])
     return list
   
-  wet_lands = Wetlands("Splash City")
+  wet_lands = Wetlands("Splash City",  "bla bla bla")
   wet_lands.animals = water_critters()
   print(f"{wet_lands.name}: {wet_lands.description}")
   for animal in wet_lands.animals:
@@ -66,7 +66,7 @@ def create_zoo():
     Madeline.swim()
     return list
   
-  snake_pit = SnakePit("Fangs R Us")
+  snake_pit = SnakePit("Fangs R Us",  "bla bla bla")
   snake_pit.animals = slither_critters()
   print(f"{snake_pit.name}: {snake_pit.description}")
   for animal in snake_pit.animals:
@@ -75,3 +75,13 @@ def create_zoo():
   pettable_critters()
   water_critters()
   slither_critters()  
+
+  # Create a Goose
+bob = Shark("Bob", "Land Shark", "watercress sandwiches", 12345)
+
+# Create an attraction
+varmint_village = PettingZoo("Varmint Village", "critters that like to dig and scurry")
+varmint_village.add_animal(bob)
+
+for animal in varmint_village.animals:
+    print(animal)

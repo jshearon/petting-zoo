@@ -1,11 +1,7 @@
-class PettingZoo:
-  def __init__(self, name):
-    self.name = name
-    self.description = "Your one stop shop for all things pettable"
-    self.animals = list()
-  
-  def add_animal(self, animal):
-    self.animals.append(animal)
+from .attraction import Attraction
+class PettingZoo(Attraction):
+  def __init__(self, name, description):
+        super().__init__(name, description)
   
   @property 
   def last_critter_added(self):
