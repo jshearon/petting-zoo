@@ -6,6 +6,10 @@ class PettingZoo:
   
   def add_animal(self, animal):
     self.animals.append(animal)
+  
+  @property 
+  def last_critter_added(self):
+    return f"The laster critter added to {self.name}: {self.animals[-1]}"
 
 class Wetlands:
   def __init__(self, name):
